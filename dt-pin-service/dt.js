@@ -4,8 +4,10 @@ module.exports = function dt(options) {
 		objectFactory.load$(id, (err, dt) => {
 			if (err) {
 				return respond({success: false, msg: err})
-			} else if (dt && action){
-				action(dt)
+			} else if (dt){
+				if(action){
+					action(dt)
+				}
 			} else {
 				return respond({success: false, msg: 'DT not found for id ' + id})
 			}
@@ -13,9 +15,9 @@ module.exports = function dt(options) {
 	}
 
 	this.add('role:dt,cmd:GET', (msg, respond) => {
-		if (msg.hasOwnProperty('id')) {
+		if (msg.hasOwnProperty('id') && msg.id !== undefined) {
 			_getDT(this.make('dt'), msg.id, respond, (dt) => {
-				respond(null, {success: true, data: [dt.data$(false)]})
+				respond(null, {success: true, data: dt.data$(false)})
 			})
 		} else {
 			this.make('dt').list$( (err, list) => {
@@ -33,7 +35,7 @@ module.exports = function dt(options) {
 			if (err) {
 				return respond({success: false, msg: err})
 			} else {
-				respond(null, {success: true, data: [dt.data$(false)]})
+				respond(null, {success: true, data: dt.data$(false)})
 			}
 		})
 	})
@@ -49,12 +51,15 @@ module.exports = function dt(options) {
 
 		let objectFactory = this.make('dt')
 		_getDT(objectFactory, msg.id, respond, (dt) => {
+			if (dt.hasOwnProperty('state') && 'closed' === dt.state) {
+				return respond({success: false, msg: 'work request is already closed'})
+			}
 			objectFactory.id = msg.id
 			objectFactory.data$(msg.data).save$((err, dt) => {
 				if (err) {
 					return respond({success: false, msg: err})
 				} else {
-					respond(null, {success: true, data: [dt.data$(false)]})
+					respond(null, {success: true, data: dt.data$(false)})
 				}
 			})
 		})
@@ -67,7 +72,7 @@ module.exports = function dt(options) {
 				if (err) {
 					return respond({success: false, msg: err})
 				} else {
-					respond(null, {success: true, data: [dt.data$(false)]})
+					respond(null, {success: true, data: dt.data$(false)})
 				}
 			})
 		})

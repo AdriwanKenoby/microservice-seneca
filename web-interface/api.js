@@ -1,16 +1,17 @@
 module.exports = function api(options) {
 
 	// traitement des messages Seneca de type { role , path }
-	this.add('role:api,path:dt', function(msg, respond) {
+	this.add('role:api,path:dt', (msg, respond) => {
 		this.act('role:dt', {
 			cmd:    msg.request$.method,  // envoi de la méthode HTTP associée à la requête
-			id:     msg.id_dt	           // envoi de l'identifiant de la DT transmis dans la requête HTTP
+			id:     msg.args.params.id_dt,	// envoi de l'identifiant de la DT transmis dans la requête HTTP
+			data:   msg.args.body
 		}, respond)
 	})
 
 	// action déclenchée au démarrage de l’application permettant la transformation
 	// des requêtes HTTP en messages Seneca
-	this.add('init:api', function(msg, respond) {
+	this.add('init:api', (msg, respond) => {
 		this.act('role:web', {
 			routes: {
 				prefix: '/api',
