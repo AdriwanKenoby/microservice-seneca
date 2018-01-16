@@ -1,0 +1,18 @@
+{
+  "name": "dt-pin-service",
+  "version": "1.0.0",
+  "description": "ALOS project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "adriwan kenoby",
+  "license": "ISC",
+  "dependencies": {
+    "seneca": "^3.4.3",
+    "seneca-basic": "^0.5.1",
+    "seneca-entity": "^2.0.2",
+    "seneca-mem-store": "^1.0.1",
+    "seneca-repl": "^1.1.2"
+  }
+}

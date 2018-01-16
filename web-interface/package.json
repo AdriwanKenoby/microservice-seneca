@@ -1,0 +1,18 @@
+{
+  "name": "web-interface",
+  "version": "1.0.0",
+  "description": "ALOS project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "adriwan kenoby",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "seneca": "^3.4.3",
+    "seneca-web": "^2.2.0",
+    "seneca-web-adapter-express": "^1.1.1"
+  }
+}
