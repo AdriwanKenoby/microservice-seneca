@@ -4,7 +4,7 @@ module.exports = function dt(options) {
 		objectFactory.load$(id, (err, dt) => {
 			if (err) {
 				return respond({success: false, msg: err})
-			} else if (dt){
+			} else if (dt) {
 				if(action){
 					action(dt)
 				}
@@ -31,10 +31,13 @@ module.exports = function dt(options) {
 	})
 
 	this.add('role:dt,cmd:POST', (msg, respond) => {
-		this.make('dt').data$(msg.data).save$( (err, dt) => {
+		let objectFactory = this.make('dt')
+		objectFactory.state = 'created'
+		objectFactory.data$(msg.data).save$( (err, dt) => {
 			if (err) {
 				return respond({success: false, msg: err})
 			} else {
+				this.act('role:stats,info:dt', {cmd: 'POST', dt:dt})
 				respond(null, {success: true, data: dt.data$(false)})
 			}
 		})
@@ -51,7 +54,7 @@ module.exports = function dt(options) {
 
 		let objectFactory = this.make('dt')
 		_getDT(objectFactory, msg.id, respond, (dt) => {
-			if (dt.hasOwnProperty('state') && 'closed' === dt.state) {
+			if ('closed' === dt.state) {
 				return respond({success: false, msg: 'work request is already closed'})
 			}
 			objectFactory.id = msg.id
@@ -59,6 +62,7 @@ module.exports = function dt(options) {
 				if (err) {
 					return respond({success: false, msg: err})
 				} else {
+					this.act('role:stats,info:dt', {cmd:'PUT', dt:dt})
 					respond(null, {success: true, data: dt.data$(false)})
 				}
 			})
@@ -72,9 +76,14 @@ module.exports = function dt(options) {
 				if (err) {
 					return respond({success: false, msg: err})
 				} else {
+					if (dt.state === 'closed') {
+						return respond({success: false, msg: 'You can\'t delete a work request which is already closed'})
+					}
+					this.act('role:stats,info:dt', {cmd:'DELETE', dt:dt})
 					respond(null, {success: true, data: dt.data$(false)})
 				}
 			})
 		})
 	})
+
 }
