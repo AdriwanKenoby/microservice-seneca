@@ -9,6 +9,12 @@ module.exports = function api(options) {
 		}, respond)
 	})
 
+	this.add('role:api,path:stats', (msg, respond) => {
+		this.act('role:stats', {
+			applicant: 		msg.args.params.user
+		}, respond)
+	})
+
 	// action déclenchée au démarrage de l’application permettant la transformation
 	// des requêtes HTTP en messages Seneca
 	this.add('init:api', (msg, respond) => {
@@ -25,6 +31,10 @@ module.exports = function api(options) {
 						DELETE: true,
 						POST: true,
 						suffix: '/:id_dt?'
+					},
+					stats: {
+						GET: true,
+						suffix: '/:user?'
 					}
 				}
 			}
