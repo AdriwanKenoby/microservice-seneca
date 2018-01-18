@@ -19,6 +19,11 @@ var updDT = {
   work: "PC reinstall"
 };
 
+var pierreWR = {
+  applicant: "pierre",
+  work: "PC configuration"
+}
+
 function DTEquals(p1, p2) {
   for (var n in p1) {
     assert.equal(p1[n], p2[n]);
@@ -27,7 +32,8 @@ function DTEquals(p1, p2) {
 
 console.log('Client start')
 
-var dt_id = null;
+var dt_id = null,
+  pierreWR_id =null
 
 masync.series([
   // creation d'une DT

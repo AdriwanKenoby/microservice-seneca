@@ -35,14 +35,13 @@ module.exports = function engine(options) {
 			if (err) return respond({ success: false, msg: err })
 			let results = search_loaded.search(msg.dt.work)
 			results = results.find( (elem) => { return (elem.id === msg.dt.id && elem.work === msg.dt.work) })
-			if (results === undefined) {
-				search.add({id: msg.dt.id, work: msg.dt.work}, filter);
-				// Save current db
-				search.save('search.json', (err) => {
-					if (err) return respond({ success: false, msg: err })
-					respond(null, {success:true})
-				})
-			}
+			if (results !== undefined) return respond()
+			search.add({id: msg.dt.id, work: msg.dt.work}, filter);
+			// Save current db
+			search.save('search.json', (err) => {
+				if (err) return respond({ success: false, msg: err })
+				respond(null, {success:true})
+			})
 		})
 	})
 }
