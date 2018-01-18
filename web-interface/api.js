@@ -21,6 +21,12 @@ module.exports = function api(options) {
 		}, respond)
 	})
 
+	this.add('role:api,path:engine', (msg, respond) => {
+		this.act('role:engine,info:dt,cmd:search', {
+			q: msg.args.params.query
+		}, respond)
+	})
+
 	// action déclenchée au démarrage de l’application permettant la transformation
 	// des requêtes HTTP en messages Seneca
 	this.add('init:api', (msg, respond) => {
@@ -41,6 +47,10 @@ module.exports = function api(options) {
 					stats: {
 						GET: true,
 						suffix: '/:user?'
+					},
+					engine: {
+						GET: true,
+						suffix: '/:query'
 					}
 				}
 			}

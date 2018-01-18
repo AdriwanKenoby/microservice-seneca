@@ -34,6 +34,7 @@ module.exports = function dt(options) {
 			if (err) return respond({success: false, msg: err})
 
 			this.act('role:stats,info:dt', {cmd: 'POST', dt:dt})
+			this.act('role:engine,info:dt,cmd:index', { dt:dt })
 			respond(null, {success: true, data: dt.data$(false)})
 
 		})
@@ -50,6 +51,7 @@ module.exports = function dt(options) {
 				if (err) return respond({success: false, msg: err})
 
 				this.act('role:stats,info:dt', {cmd:'PUT', dt:dt})
+				this.act('role:engine,info:dt,cmd:index', { dt:dt })
 				respond(null, {success: true, data: dt.data$(false)})
 
 			})
