@@ -49,9 +49,9 @@ module.exports = function stats(options) {
       global_stats_wr_closed = 0
 
       for (let applicant in stats) {
-        global_stats_wr_created += applicant['created']
-        global_stats_wr_opened += applicant['opened']
-        global_stats_wr_closed += applicant['closed']
+        global_stats_wr_created += stats[applicant]['created']
+        global_stats_wr_opened += stats[applicant]['opened']
+        global_stats_wr_closed += stats[applicant]['closed']
       }
 
       respond(null, {success: true, data: {

@@ -2,10 +2,16 @@ module.exports = function api(options) {
 
 	// traitement des messages Seneca de type { role , path }
 	this.add('role:api,path:dt', (msg, respond) => {
+		let data = msg.args.body;     // accès aux données présentes dans la requête HTTP
+		let params = msg.args.params; // accès aux données passées via l’URL
 		this.act('role:dt', {
-			cmd:    msg.request$.method,  // envoi de la méthode HTTP associée à la requête
-			id:     msg.args.params.id_dt,	// envoi de l'identifiant de la DT transmis dans la requête HTTP
-			data:   msg.args.body
+			cmd: msg.request$.method, // HTTP method
+			id: params.id_dt,
+			data: {
+				applicant: data.applicant,
+				work: data.work,
+				state: data.state
+			}
 		}, respond)
 	})
 
