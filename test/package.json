@@ -1,0 +1,16 @@
+{
+  "name": "client_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client_evolue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "async": "^2.6.0",
+    "restify-clients": "^1.5.2"
+  }
+}
