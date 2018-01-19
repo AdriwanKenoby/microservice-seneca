@@ -37,7 +37,7 @@ var dt_id = null,
 
 masync.series([
   // creation d'une DT
-  function(callback) {
+  (callback) => {
     client.post('/api/dt', testDT, function(err, req, res, result) {
       assert.ifError(err);
       console.log('post %j', result);
@@ -48,7 +48,7 @@ masync.series([
     })
   },
   // obtention d'une DT avec son identifiant
-  function(callback) {
+  (callback) => {
     client.get('/api/dt/'+ dt_id, function(err, req, res, result) {
       assert.ifError(err);
       assert.equal(result.success,true,'Echec get')
@@ -58,7 +58,7 @@ masync.series([
     })
   },
   // modification d'une DT (changement de description)
-  function(callback) {
+  (callback) => {
     client.put('/api/dt/'+ dt_id, {
       "work": "PC reinstall"
     }, function(err, req, res, result) {
@@ -70,7 +70,7 @@ masync.series([
     })
   },
   // modification d'une DT (cloture)
-  function(callback) {
+  (callback) => {
     client.put('/api/dt/'+ dt_id, {
       "state": "closed"
     }, function(err, req, res, result) {
@@ -82,26 +82,37 @@ masync.series([
     })
   },
   // tentative de modification d'une DT (echec car deja cloturée)
-  function(callback) {
+  (callback) => {
     client.put('/api/dt/'+ dt_id, {
       "work": "PC destruction"
     }, function(err, req, res, result) {
       assert.ifError(err);
       assert.equal(result.success,false,'Echec put (work2)')
       console.log('put %j', result);
-      assert.equal(result.msg,'work request is already closed')
+      assert.equal(result.msg,'wr is already closed')
       callback(null, 'four');
     })
   },
 
   // tentative de suppression d'une DT (echec car deja cloturee)
-  function(callback) {
+  (callback) => {
     client.del('/api/dt/' + dt_id, (err, req, res, result) => {
       assert.ifError(err)
       assert.equal(result.success, false, 'Echec del (work)')
       console.log('del %j', result)
-      assert.equal(result.msg,'You can\'t delete a work request which is already closed')
+      assert.equal(result.msg,'wr is already closed')
       callback(null,'five')
     })
+  },
+
+  (callback) => {
+    client.post('/api/dt', pierreWR, (err, req, res, result) => {
+      assert.ifError(err)
+      assert.equal(result.success, true, 'Echec post (work2 pierrWR)')
+      console.log('post %j', result)
+      DTEquals(pierreWR, result.data)
+      pierreWR = result.data;
+    })
   }
+
 ]);

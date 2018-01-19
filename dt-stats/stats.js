@@ -10,6 +10,7 @@ module.exports = function stats(options) {
     stats[dt_applicant]['created'] = stats[dt_applicant]['created'] || 0
     stats[dt_applicant]['opened'] = stats[dt_applicant]['opened'] || 0
     stats[dt_applicant]['closed'] = stats[dt_applicant]['closed'] || 0
+    stats[dt_applicant]['deleted'] = stats[dt_applicant]['deleted'] || 0
 
     switch (msg.cmd) {
       case 'POST':
@@ -23,8 +24,8 @@ module.exports = function stats(options) {
         }
         break;
       case 'DELETE':
-        stats[dt_applicant]['created']--
         stats[dt_applicant]['opened']--
+        stats[dt_applicant]['deleted']++
         break;
     }
 
@@ -35,13 +36,14 @@ module.exports = function stats(options) {
   this.add('role:stats', (msg, respond) => {
     if (msg.hasOwnProperty('applicant') && msg.applicant !== undefined) {
       if ( stats[msg.applicant] !== undefined ) {
-        respond(null, {success: true, data: {
+        return respond(null, {success: true, data: {
+          applicant: msg.applicant,
           stats_wr_created: stats[msg.applicant]['created'],
           stats_wr_opened: stats[msg.applicant]['opened'],
           stats_wr_closed: stats[msg.applicant]['closed']
         }})
       } else {
-        respond({success: false, msg: 'no stats found for applicant ' + msg.applicant})
+        return respond({success: false, msg: 'no stats found for applicant ' + msg.applicant})
       }
     } else {
       global_stats_wr_created = 0
@@ -49,12 +51,12 @@ module.exports = function stats(options) {
       global_stats_wr_closed = 0
 
       for (let applicant in stats) {
-        global_stats_wr_created += stats[applicant]['created'] 
+        global_stats_wr_created += stats[applicant]['created']
         global_stats_wr_opened += stats[applicant]['opened']
         global_stats_wr_closed += stats[applicant]['closed']
       }
 
-      respond(null, {success: true, data: {
+      return respond(null, {success: true, data: {
         global_stats_wr_created: global_stats_wr_created,
         global_stats_wr_opened: global_stats_wr_opened,
         global_stats_wr_closed: global_stats_wr_closed

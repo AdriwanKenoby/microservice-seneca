@@ -8,431 +8,1442 @@
       "p": [
         0,
         1,
-        2
+        2,
+        3,
+        5,
+        6
       ],
       "c": [
         0,
-        1,
-        2
+        2,
+        3,
+        5,
+        6
       ],
       " ": [
         0,
         1,
-        2
+        2,
+        3,
+        4,
+        5
       ],
       "u": [
         0,
-        1
+        1,
+        2,
+        3
       ],
       "d": [
         0,
-        1
+        2,
+        4
       ],
       "a": [
         0,
-        1,
-        2
+        2,
+        3,
+        4,
+        5
       ],
       "t": [
         0,
         1,
-        2
+        2,
+        3,
+        4,
+        5,
+        6
       ],
       "e": [
         0,
+        2,
+        6
+      ],
+      "o": [
         1,
-        2
-      ],
-      "r": [
-        2
-      ],
-      "i": [
-        2
+        3,
+        4,
+        5,
+        6
       ],
       "n": [
-        2
+        1,
+        4,
+        5
+      ],
+      "f": [
+        1,
+        3
+      ],
+      "i": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "g": [
+        1,
+        3
+      ],
+      "r": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "h": [
+        4
       ],
       "s": [
-        2
+        4,
+        5
+      ],
+      "k": [
+        4
       ],
       "l": [
-        2
+        4,
+        5
+      ],
+      "j": [
+        6
       ]
     },
     {
       "pc": [
         0,
         1,
-        2
+        2,
+        3,
+        5
       ],
       "c ": [
         0,
         1,
-        2
+        2,
+        3,
+        5
       ],
       " u": [
         0,
-        1
+        2
       ],
       "up": [
         0,
-        1
+        2
       ],
       "pd": [
         0,
-        1
+        2
       ],
       "da": [
         0,
-        1
+        2
       ],
       "at": [
         0,
-        1
+        1,
+        2,
+        3,
+        4,
+        5
       ],
       "te": [
         0,
-        1
-      ],
-      " r": [
         2
       ],
-      "re": [
-        2
+      " c": [
+        1,
+        3
       ],
-      "ei": [
-        2
+      "co": [
+        1,
+        3
+      ],
+      "on": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "nf": [
+        1,
+        3
+      ],
+      "fi": [
+        1,
+        3
+      ],
+      "ig": [
+        1,
+        3
+      ],
+      "gu": [
+        1,
+        3
+      ],
+      "ur": [
+        1,
+        3
+      ],
+      "ra": [
+        1,
+        3
+      ],
+      "ti": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "io": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "ha": [
+        4
+      ],
+      "ar": [
+        4
+      ],
+      "rd": [
+        4
+      ],
+      "d ": [
+        4
+      ],
+      " d": [
+        4
+      ],
+      "di": [
+        4
+      ],
+      "is": [
+        4
+      ],
+      "sk": [
+        4
+      ],
+      "k ": [
+        4
+      ],
+      " i": [
+        4,
+        5
       ],
       "in": [
-        2
+        4,
+        5
       ],
       "ns": [
-        2
+        4,
+        5
       ],
       "st": [
-        2
+        4,
+        5
       ],
       "ta": [
-        2
+        4,
+        5
       ],
       "al": [
-        2
+        4,
+        5
       ],
       "ll": [
-        2
+        4,
+        5
+      ],
+      "la": [
+        4,
+        5
+      ],
+      "pr": [
+        6
+      ],
+      "ro": [
+        6
+      ],
+      "oj": [
+        6
+      ],
+      "je": [
+        6
+      ],
+      "ec": [
+        6
+      ],
+      "ct": [
+        6
       ]
     },
     {
       "pc ": [
         0,
         1,
-        2
+        2,
+        3,
+        5
       ],
       "c u": [
         0,
-        1
+        2
       ],
       " up": [
         0,
-        1
+        2
       ],
       "upd": [
         0,
-        1
+        2
       ],
       "pda": [
         0,
-        1
+        2
       ],
       "dat": [
         0,
-        1
+        2
       ],
       "ate": [
         0,
-        1
-      ],
-      "c r": [
         2
       ],
-      " re": [
-        2
+      "c c": [
+        1,
+        3
       ],
-      "rei": [
-        2
+      " co": [
+        1,
+        3
       ],
-      "ein": [
-        2
+      "con": [
+        1,
+        3
+      ],
+      "onf": [
+        1,
+        3
+      ],
+      "nfi": [
+        1,
+        3
+      ],
+      "fig": [
+        1,
+        3
+      ],
+      "igu": [
+        1,
+        3
+      ],
+      "gur": [
+        1,
+        3
+      ],
+      "ura": [
+        1,
+        3
+      ],
+      "rat": [
+        1,
+        3
+      ],
+      "ati": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "tio": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "ion": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "har": [
+        4
+      ],
+      "ard": [
+        4
+      ],
+      "rd ": [
+        4
+      ],
+      "d d": [
+        4
+      ],
+      " di": [
+        4
+      ],
+      "dis": [
+        4
+      ],
+      "isk": [
+        4
+      ],
+      "sk ": [
+        4
+      ],
+      "k i": [
+        4
+      ],
+      " in": [
+        4,
+        5
       ],
       "ins": [
-        2
+        4,
+        5
       ],
       "nst": [
-        2
+        4,
+        5
       ],
       "sta": [
-        2
+        4,
+        5
       ],
       "tal": [
-        2
+        4,
+        5
       ],
       "all": [
-        2
+        4,
+        5
+      ],
+      "lla": [
+        4,
+        5
+      ],
+      "lat": [
+        4,
+        5
+      ],
+      "c i": [
+        5
+      ],
+      "pro": [
+        6
+      ],
+      "roj": [
+        6
+      ],
+      "oje": [
+        6
+      ],
+      "jec": [
+        6
+      ],
+      "ect": [
+        6
       ]
     },
     {
       "pc u": [
         0,
-        1
+        2
       ],
       "c up": [
         0,
-        1
+        2
       ],
       " upd": [
         0,
-        1
+        2
       ],
       "upda": [
         0,
-        1
+        2
       ],
       "pdat": [
         0,
-        1
+        2
       ],
       "date": [
         0,
-        1
-      ],
-      "pc r": [
         2
       ],
-      "c re": [
-        2
+      "pc c": [
+        1,
+        3
       ],
-      " rei": [
-        2
+      "c co": [
+        1,
+        3
       ],
-      "rein": [
-        2
+      " con": [
+        1,
+        3
       ],
-      "eins": [
-        2
+      "conf": [
+        1,
+        3
+      ],
+      "onfi": [
+        1,
+        3
+      ],
+      "nfig": [
+        1,
+        3
+      ],
+      "figu": [
+        1,
+        3
+      ],
+      "igur": [
+        1,
+        3
+      ],
+      "gura": [
+        1,
+        3
+      ],
+      "urat": [
+        1,
+        3
+      ],
+      "rati": [
+        1,
+        3
+      ],
+      "atio": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "tion": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "hard": [
+        4
+      ],
+      "ard ": [
+        4
+      ],
+      "rd d": [
+        4
+      ],
+      "d di": [
+        4
+      ],
+      " dis": [
+        4
+      ],
+      "disk": [
+        4
+      ],
+      "isk ": [
+        4
+      ],
+      "sk i": [
+        4
+      ],
+      "k in": [
+        4
+      ],
+      " ins": [
+        4,
+        5
       ],
       "inst": [
-        2
+        4,
+        5
       ],
       "nsta": [
-        2
+        4,
+        5
       ],
       "stal": [
-        2
+        4,
+        5
       ],
       "tall": [
-        2
+        4,
+        5
+      ],
+      "alla": [
+        4,
+        5
+      ],
+      "llat": [
+        4,
+        5
+      ],
+      "lati": [
+        4,
+        5
+      ],
+      "pc i": [
+        5
+      ],
+      "c in": [
+        5
+      ],
+      "proj": [
+        6
+      ],
+      "roje": [
+        6
+      ],
+      "ojec": [
+        6
+      ],
+      "ject": [
+        6
       ]
     },
     {
       "pc up": [
         0,
-        1
+        2
       ],
       "c upd": [
         0,
-        1
+        2
       ],
       " upda": [
         0,
-        1
+        2
       ],
       "updat": [
         0,
-        1
+        2
       ],
       "pdate": [
         0,
-        1
-      ],
-      "pc re": [
         2
       ],
-      "c rei": [
-        2
+      "pc co": [
+        1,
+        3
       ],
-      " rein": [
-        2
+      "c con": [
+        1,
+        3
       ],
-      "reins": [
-        2
+      " conf": [
+        1,
+        3
       ],
-      "einst": [
-        2
+      "confi": [
+        1,
+        3
+      ],
+      "onfig": [
+        1,
+        3
+      ],
+      "nfigu": [
+        1,
+        3
+      ],
+      "figur": [
+        1,
+        3
+      ],
+      "igura": [
+        1,
+        3
+      ],
+      "gurat": [
+        1,
+        3
+      ],
+      "urati": [
+        1,
+        3
+      ],
+      "ratio": [
+        1,
+        3
+      ],
+      "ation": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "hard ": [
+        4
+      ],
+      "ard d": [
+        4
+      ],
+      "rd di": [
+        4
+      ],
+      "d dis": [
+        4
+      ],
+      " disk": [
+        4
+      ],
+      "disk ": [
+        4
+      ],
+      "isk i": [
+        4
+      ],
+      "sk in": [
+        4
+      ],
+      "k ins": [
+        4
+      ],
+      " inst": [
+        4,
+        5
       ],
       "insta": [
-        2
+        4,
+        5
       ],
       "nstal": [
-        2
+        4,
+        5
       ],
       "stall": [
-        2
+        4,
+        5
+      ],
+      "talla": [
+        4,
+        5
+      ],
+      "allat": [
+        4,
+        5
+      ],
+      "llati": [
+        4,
+        5
+      ],
+      "latio": [
+        4,
+        5
+      ],
+      "pc in": [
+        5
+      ],
+      "c ins": [
+        5
+      ],
+      "proje": [
+        6
+      ],
+      "rojec": [
+        6
+      ],
+      "oject": [
+        6
       ]
     },
     {
       "pc upd": [
         0,
-        1
+        2
       ],
       "c upda": [
         0,
-        1
+        2
       ],
       " updat": [
         0,
-        1
+        2
       ],
       "update": [
         0,
-        1
-      ],
-      "pc rei": [
         2
       ],
-      "c rein": [
-        2
+      "pc con": [
+        1,
+        3
       ],
-      " reins": [
-        2
+      "c conf": [
+        1,
+        3
       ],
-      "reinst": [
-        2
+      " confi": [
+        1,
+        3
       ],
-      "einsta": [
-        2
+      "config": [
+        1,
+        3
+      ],
+      "onfigu": [
+        1,
+        3
+      ],
+      "nfigur": [
+        1,
+        3
+      ],
+      "figura": [
+        1,
+        3
+      ],
+      "igurat": [
+        1,
+        3
+      ],
+      "gurati": [
+        1,
+        3
+      ],
+      "uratio": [
+        1,
+        3
+      ],
+      "ration": [
+        1,
+        3
+      ],
+      "hard d": [
+        4
+      ],
+      "ard di": [
+        4
+      ],
+      "rd dis": [
+        4
+      ],
+      "d disk": [
+        4
+      ],
+      " disk ": [
+        4
+      ],
+      "disk i": [
+        4
+      ],
+      "isk in": [
+        4
+      ],
+      "sk ins": [
+        4
+      ],
+      "k inst": [
+        4
+      ],
+      " insta": [
+        4,
+        5
       ],
       "instal": [
-        2
+        4,
+        5
       ],
       "nstall": [
-        2
+        4,
+        5
+      ],
+      "stalla": [
+        4,
+        5
+      ],
+      "tallat": [
+        4,
+        5
+      ],
+      "allati": [
+        4,
+        5
+      ],
+      "llatio": [
+        4,
+        5
+      ],
+      "lation": [
+        4,
+        5
+      ],
+      "pc ins": [
+        5
+      ],
+      "c inst": [
+        5
+      ],
+      "projec": [
+        6
+      ],
+      "roject": [
+        6
       ]
     },
     {
       "pc upda": [
         0,
-        1
+        2
       ],
       "c updat": [
         0,
-        1
+        2
       ],
       " update": [
         0,
-        1
-      ],
-      "pc rein": [
         2
       ],
-      "c reins": [
-        2
+      "pc conf": [
+        1,
+        3
       ],
-      " reinst": [
-        2
+      "c confi": [
+        1,
+        3
       ],
-      "reinsta": [
-        2
+      " config": [
+        1,
+        3
       ],
-      "einstal": [
-        2
+      "configu": [
+        1,
+        3
+      ],
+      "onfigur": [
+        1,
+        3
+      ],
+      "nfigura": [
+        1,
+        3
+      ],
+      "figurat": [
+        1,
+        3
+      ],
+      "igurati": [
+        1,
+        3
+      ],
+      "guratio": [
+        1,
+        3
+      ],
+      "uration": [
+        1,
+        3
+      ],
+      "hard di": [
+        4
+      ],
+      "ard dis": [
+        4
+      ],
+      "rd disk": [
+        4
+      ],
+      "d disk ": [
+        4
+      ],
+      " disk i": [
+        4
+      ],
+      "disk in": [
+        4
+      ],
+      "isk ins": [
+        4
+      ],
+      "sk inst": [
+        4
+      ],
+      "k insta": [
+        4
+      ],
+      " instal": [
+        4,
+        5
       ],
       "install": [
-        2
+        4,
+        5
+      ],
+      "nstalla": [
+        4,
+        5
+      ],
+      "stallat": [
+        4,
+        5
+      ],
+      "tallati": [
+        4,
+        5
+      ],
+      "allatio": [
+        4,
+        5
+      ],
+      "llation": [
+        4,
+        5
+      ],
+      "pc inst": [
+        5
+      ],
+      "c insta": [
+        5
+      ],
+      "project": [
+        6
       ]
     },
     {
       "pc updat": [
         0,
-        1
+        2
       ],
       "c update": [
         0,
-        1
-      ],
-      "pc reins": [
         2
       ],
-      "c reinst": [
-        2
+      "pc confi": [
+        1,
+        3
       ],
-      " reinsta": [
-        2
+      "c config": [
+        1,
+        3
       ],
-      "reinstal": [
-        2
+      " configu": [
+        1,
+        3
       ],
-      "einstall": [
-        2
+      "configur": [
+        1,
+        3
+      ],
+      "onfigura": [
+        1,
+        3
+      ],
+      "nfigurat": [
+        1,
+        3
+      ],
+      "figurati": [
+        1,
+        3
+      ],
+      "iguratio": [
+        1,
+        3
+      ],
+      "guration": [
+        1,
+        3
+      ],
+      "hard dis": [
+        4
+      ],
+      "ard disk": [
+        4
+      ],
+      "rd disk ": [
+        4
+      ],
+      "d disk i": [
+        4
+      ],
+      " disk in": [
+        4
+      ],
+      "disk ins": [
+        4
+      ],
+      "isk inst": [
+        4
+      ],
+      "sk insta": [
+        4
+      ],
+      "k instal": [
+        4
+      ],
+      " install": [
+        4,
+        5
+      ],
+      "installa": [
+        4,
+        5
+      ],
+      "nstallat": [
+        4,
+        5
+      ],
+      "stallati": [
+        4,
+        5
+      ],
+      "tallatio": [
+        4,
+        5
+      ],
+      "allation": [
+        4,
+        5
+      ],
+      "pc insta": [
+        5
+      ],
+      "c instal": [
+        5
       ]
     },
     {
       "pc update": [
         0,
-        1
-      ],
-      "pc reinst": [
         2
       ],
-      "c reinsta": [
-        2
+      "pc config": [
+        1,
+        3
       ],
-      " reinstal": [
-        2
+      "c configu": [
+        1,
+        3
       ],
-      "reinstall": [
-        2
+      " configur": [
+        1,
+        3
+      ],
+      "configura": [
+        1,
+        3
+      ],
+      "onfigurat": [
+        1,
+        3
+      ],
+      "nfigurati": [
+        1,
+        3
+      ],
+      "figuratio": [
+        1,
+        3
+      ],
+      "iguration": [
+        1,
+        3
+      ],
+      "hard disk": [
+        4
+      ],
+      "ard disk ": [
+        4
+      ],
+      "rd disk i": [
+        4
+      ],
+      "d disk in": [
+        4
+      ],
+      " disk ins": [
+        4
+      ],
+      "disk inst": [
+        4
+      ],
+      "isk insta": [
+        4
+      ],
+      "sk instal": [
+        4
+      ],
+      "k install": [
+        4
+      ],
+      " installa": [
+        4,
+        5
+      ],
+      "installat": [
+        4,
+        5
+      ],
+      "nstallati": [
+        4,
+        5
+      ],
+      "stallatio": [
+        4,
+        5
+      ],
+      "tallation": [
+        4,
+        5
+      ],
+      "pc instal": [
+        5
+      ],
+      "c install": [
+        5
       ]
     },
     {
-      "pc reinsta": [
-        2
+      "pc configu": [
+        1,
+        3
       ],
-      "c reinstal": [
-        2
+      "c configur": [
+        1,
+        3
       ],
-      " reinstall": [
-        2
+      " configura": [
+        1,
+        3
+      ],
+      "configurat": [
+        1,
+        3
+      ],
+      "onfigurati": [
+        1,
+        3
+      ],
+      "nfiguratio": [
+        1,
+        3
+      ],
+      "figuration": [
+        1,
+        3
+      ],
+      "hard disk ": [
+        4
+      ],
+      "ard disk i": [
+        4
+      ],
+      "rd disk in": [
+        4
+      ],
+      "d disk ins": [
+        4
+      ],
+      " disk inst": [
+        4
+      ],
+      "disk insta": [
+        4
+      ],
+      "isk instal": [
+        4
+      ],
+      "sk install": [
+        4
+      ],
+      "k installa": [
+        4
+      ],
+      " installat": [
+        4,
+        5
+      ],
+      "installati": [
+        4,
+        5
+      ],
+      "nstallatio": [
+        4,
+        5
+      ],
+      "stallation": [
+        4,
+        5
+      ],
+      "pc install": [
+        5
+      ],
+      "c installa": [
+        5
       ]
     },
     {
-      "pc reinstal": [
-        2
+      "pc configur": [
+        1,
+        3
       ],
-      "c reinstall": [
-        2
+      "c configura": [
+        1,
+        3
+      ],
+      " configurat": [
+        1,
+        3
+      ],
+      "configurati": [
+        1,
+        3
+      ],
+      "onfiguratio": [
+        1,
+        3
+      ],
+      "nfiguration": [
+        1,
+        3
+      ],
+      "hard disk i": [
+        4
+      ],
+      "ard disk in": [
+        4
+      ],
+      "rd disk ins": [
+        4
+      ],
+      "d disk inst": [
+        4
+      ],
+      " disk insta": [
+        4
+      ],
+      "disk instal": [
+        4
+      ],
+      "isk install": [
+        4
+      ],
+      "sk installa": [
+        4
+      ],
+      "k installat": [
+        4
+      ],
+      " installati": [
+        4,
+        5
+      ],
+      "installatio": [
+        4,
+        5
+      ],
+      "nstallation": [
+        4,
+        5
+      ],
+      "pc installa": [
+        5
+      ],
+      "c installat": [
+        5
       ]
     },
     {
-      "pc reinstall": [
-        2
+      "pc configura": [
+        1,
+        3
+      ],
+      "c configurat": [
+        1,
+        3
+      ],
+      " configurati": [
+        1,
+        3
+      ],
+      "configuratio": [
+        1,
+        3
+      ],
+      "onfiguration": [
+        1,
+        3
+      ],
+      "hard disk in": [
+        4
+      ],
+      "ard disk ins": [
+        4
+      ],
+      "rd disk inst": [
+        4
+      ],
+      "d disk insta": [
+        4
+      ],
+      " disk instal": [
+        4
+      ],
+      "disk install": [
+        4
+      ],
+      "isk installa": [
+        4
+      ],
+      "sk installat": [
+        4
+      ],
+      "k installati": [
+        4
+      ],
+      " installatio": [
+        4,
+        5
+      ],
+      "installation": [
+        4,
+        5
+      ],
+      "pc installat": [
+        5
+      ],
+      "c installati": [
+        5
       ]
     }
   ],
   "data": [
     {
-      "id": "wgulgq",
+      "id": "7bhrmd",
       "work": "PC update"
     },
     {
-      "id": "0fhz6h",
+      "id": "acmzzu",
+      "work": "PC configuration"
+    },
+    {
+      "id": "mucku6",
       "work": "PC update"
     },
     {
-      "id": "0fhz6h",
-      "work": "PC reinstall"
+      "id": "n5p237",
+      "work": "PC configuration"
+    },
+    {
+      "id": "24fczu",
+      "work": "Hard disk installation"
+    },
+    {
+      "id": "1zp43v",
+      "work": "PC installation"
+    },
+    {
+      "id": "bl1ql1",
+      "work": "project"
     }
   ],
-  "data_ptr": 3,
+  "data_ptr": 7,
   "free_slots": [],
-  "single_data_counter": 3
+  "single_data_counter": 7
 }
