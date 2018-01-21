@@ -57,6 +57,17 @@ describe('app work request', () => {
       done()
     })
   })
+  
+  // Indexing engine test 1
+  // Test indexing and searching (search in recently indexed wr)
+  // keyword = p
+  it('search with a keyword', (done) => {
+    client.get('/api/engine/p', (err, req, res, result) => {
+      if (err) return done(err);
+      expect(result.data[0].work).to.be.equals("PC update");
+      done()
+    })
+  })
 
   it('update work item', (done) => {
     client.put('/api/dt/' + paulWR.id, {"work": "PC reinstall"}, (err, req, res, result) => {
@@ -209,6 +220,18 @@ describe('app work request', () => {
       expect(result.data.global_stats_wr_created).to.be.equals(4);
       expect(result.data.global_stats_wr_opened).to.be.equals(0);
       expect(result.data.global_stats_wr_closed).to.be.equals(1);
+      done()
+    })
+  })
+  
+// indexing engine test 2
+// we search with two keywords, 'pc' and 'insta' to see that it searches in any part of the string.
+// %20 for space character
+// since only one wr remains, after all modifications and deletions, the result must be 1
+  it('search with a keyword', (done) => {
+    client.get('/api/engine/pc%20insta', (err, req, res, result) => {
+      if (err) return done(err);
+      expect(result.data.length === 1).to.be.true();
       done()
     })
   })
