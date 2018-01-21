@@ -46,5 +46,9 @@ module.exports = function engine(options) {
 	this.add('role:engine,info:dt,cmd:delete', (msg, respond) => {
 		search.remove(assoc_id[msg.dt.id])
 		delete assoc_id[msg.dt.id]
+		search.save('search.json', (err) => {
+			if (err) return respond({ success: false, msg: err })
+			respond(null, {success:true})
+		})
 	})
 }
