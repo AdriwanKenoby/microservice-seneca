@@ -32,7 +32,7 @@ module.exports = function dt(options) {
 
 	this.add('role:dt,cmd:POST', (msg, respond) => {
 		let objectFactory = this.make('dt')
-		objectFactory.state = 'created'
+		objectFactory.state = 'opened'
 		objectFactory.data$(msg.data).save$( (err, dt) => {
 			if (err) return respond({success: false, msg: err})
 
