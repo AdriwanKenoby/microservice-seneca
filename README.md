@@ -19,11 +19,11 @@ node > 8.*
 ## Présentation de l'application
 
 Seneca fonctionne sur le concept d'échange de messages et permet de crée des architectures microservices ou chaque composant est indépendant.  
-La solution développée permet de gérer une liste de demandes de travaux (DT) à partir d'une API REST à travers le Framework Seneca constitué des micro-services suivants :  
-1- Web-interface : Reçoit les requêtes HTTP, et les acheminent vers les microservices correspondent.  
-2- dt-pin-service : Réalise les opérations CRUD.   
-3- dt-stats : fournis des statistiques a propos les DT crées.  
-4- dt-search-engine : gère un moteur d’indexation.  
+La solution développée permet de gérer une liste de demandes de travaux (DT) à partir d'une API REST à travers le Framework Seneca constitué des micro-services suivants :    
+* 1- Web-interface : Reçoit les requêtes HTTP, et les acheminent vers les microservices correspondent.  
+* 2- dt-pin-service : Réalise les opérations CRUD.   
+* 3- dt-stats : fournis des statistiques a propos les DT crées.  
+* 4- dt-search-engine : gère un moteur d’indexation.  
 
 ### Représentation schématique de l'architecture
 
