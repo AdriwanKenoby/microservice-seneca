@@ -19,7 +19,7 @@ node > 8.*
 ## Présentation de l'application
 
 Seneca fonctionne sur le concept d'échange de messages et permet de crée des architectures microservices ou chaque composant est indépendant.  
-La solution développée permet de gérer une liste de demandes de travaux (DT) à partir d'une API REST à travers Seneca constitué des micro-services suivants :    
+La solution développée permet de gérer une base de données gérant des demandes de travaux (DT) à partir d'une API REST constituée des micro-services suivants :    
 * Web-interface : Reçoit les requêtes HTTP, et les acheminent vers les microservices correspondent.  
 * dt-pin-service : Réalise les opérations CRUD.   
 * dt-stats : Fournit des statistiques a propos des DTs.  
@@ -35,7 +35,7 @@ La solution développée permet de gérer une liste de demandes de travaux (DT) 
 
 | action                            | notes                                                                |
 |-----------------------------------|----------------------------------------------------------------------|
-| role:dt,cmd:GET                   | list all DT objects in DB                                            |
+| role:dt,cmd:GET,id:\*             | list all DT objects in DB or just one object by id                   |
 | role:dt,cmd:POST,data:\*          | create DT object with provided data                                  |
 | role:dt,cmd:PUT,id:\*,data:\*     | update DT                                                            |
 | role:dt,cmd:DELETE,id:\*          | delete DT, all with 'opened' state if if not provided                |
@@ -73,4 +73,4 @@ La solution développée permet de gérer une liste de demandes de travaux (DT) 
 ## Test
 
 Pour s'assurer du bon fonctionnement de nos micro-services, plusieurs tests ont ete realises durent toutes les phases de développement.  
-Package de test disponible dans le répertoire `test/` deux client sont fournit, certaines routes ont ete changees dans le client de base ! 
+Package de test disponible dans le répertoire `test/` deux client sont fournit, certaines routes ont ete changees dans le client de base !
