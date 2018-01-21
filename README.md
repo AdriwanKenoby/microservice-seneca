@@ -2,10 +2,6 @@
 
 > L'idee generale de ce projet est de proposer une api REST afin de gérer des demandes de travaux à l'aide de la bibliotheque Seneca.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 ### Installation
 
 ```
@@ -68,3 +64,7 @@ Seneca fonctionne sur le concept d'échange de messages et permet de crée des a
 | DELETE    | /api/dt            | role:api,path:dt...    | role:dt,cmd:DELETE,id:\*                                    |         ""          |
 | GET       | /api/stats/:user?  | role:api,path:stats... | role:stats,?applicant:user                                  | cf. dt-stats        |
 | GET       | /api/engine/:query | role:api,path:engine...| role:engine,info:dt,cmd:search,q:\*                         | cf. dt-search-engine|
+
+## Test
+
+package de test disponible dans le répertoire `test/` deux client sont fournit
