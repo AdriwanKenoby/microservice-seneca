@@ -22,8 +22,8 @@ Seneca fonctionne sur le concept d'échange de messages et permet de crée des a
 La solution développée permet de gérer une liste de demandes de travaux (DT) à partir d'une API REST à travers le Framework Seneca constitué des micro-services suivants :    
 * Web-interface : Reçoit les requêtes HTTP, et les acheminent vers les microservices correspondent.  
 * dt-pin-service : Réalise les opérations CRUD.   
-* dt-stats : fournis des statistiques a propos les DT crées.  
-* dt-search-engine : gère un moteur d’indexation.  
+* dt-stats : Fournit des statistiques a propos des DTs.  
+* dt-search-engine : Gère un moteur d'indexation.  
 
 ### Représentation schématique de l'architecture
 
