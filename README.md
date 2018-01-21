@@ -19,7 +19,7 @@ node > 8.*
 ## Présentation de l'application
 
 Seneca fonctionne sur le concept d'échange de messages et permet de crée des architectures microservices ou chaque composant est indépendant.  
-La solution développée permet de gérer une base de données gérant des demandes de travaux (DT) à partir d'une API REST constituée des micro-services suivants :    
+La solution développée permet de gérer une liste de demandes de travaux (DT) à partir d'une API REST à travers Seneca constitué des micro-services suivants :    
 * Web-interface : Reçoit les requêtes HTTP, et les acheminent vers les microservices correspondent.  
 * dt-pin-service : Réalise les opérations CRUD.   
 * dt-stats : Fournit des statistiques a propos des DTs.  
@@ -35,7 +35,7 @@ La solution développée permet de gérer une base de données gérant des deman
 
 | action                            | notes                                                                |
 |-----------------------------------|----------------------------------------------------------------------|
-| role:dt,cmd:GET,id:\*             | list all DT objects in DB or just one object by id                   |
+| role:dt,cmd:GET                   | list all DT objects in DB                                            |
 | role:dt,cmd:POST,data:\*          | create DT object with provided data                                  |
 | role:dt,cmd:PUT,id:\*,data:\*     | update DT                                                            |
 | role:dt,cmd:DELETE,id:\*          | delete DT, all with 'opened' state if if not provided                |
@@ -73,4 +73,31 @@ La solution développée permet de gérer une base de données gérant des deman
 ## Test
 
 Pour s'assurer du bon fonctionnement de nos micro-services, plusieurs tests ont ete realises durent toutes les phases de développement.  
-Package de test disponible dans le répertoire `test/` deux client sont fournit, certaines routes ont ete changees dans le client de base !
+Package de test disponible dans le répertoire `test/` deux clients sont fournis, certaines routes ont ete changees dans le client de base !  
+
+### Tests en plus :  
+
+#### Pour l'indexation
+On recherche avec le mot-cle "p" et on compare si le work du resultat est egale a "PC update" de la dt qu'on vient d'ajouter
+'''
+it('search with a keyword', (done) => {
+    client.get('/api/engine/p', (err, req, res, result) => {
+      if (err) return done(err);
+      expect(result.data[0].work).to.be.equals("PC update");
+      done()
+    })
+  })
+'''
+
+#### Pour la desindexation et mise a jour
+Vers la fin des tests, plusieurs mises a jour et suppressions ont ete realisees, et ne reste plus q'une seule dt avec le work egale a "PC reinstall"  
+Pour tester la desindexation et la mise a jour ainsi que la recherche dans n'importe quel endroit de la chaine de caractere, on a fait in test avec le mot cle "pc insta", le resultat retourne doit etre egale a un.
+'''
+it('search with a keyword', (done) => {
+    client.get('/api/engine/pc%20insta', (err, req, res, result) => {
+      if (err) return done(err);
+      expect(result.data.length === 1).to.be.true();
+      done()
+    })
+  })
+'''
