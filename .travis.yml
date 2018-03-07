@@ -4,10 +4,6 @@ node_js:
     - '8'
 sudo: false
 
-before_install:
-    - curl -sL https://deb.nodesource.com/setup_8.x | bash -
-    - apt-get install -y nodejs
-
 install:
     - cd dt-pin-service && npm i
     - cd ../dt-stats && npm i
