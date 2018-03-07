@@ -14,13 +14,13 @@ install:
 
 before_script:
     - node dt-pin-service/main.js &
-    - SERVER_CRUD_PID = $!
+    - SERVER_CRUD_PID=$!
     - node dt-stats/main.js &
-    - SERVER_STATS_PID = $!
+    - SERVER_STATS_PID=$!
     - node dt-search-engine/main.js &
-    - SERVER_SEARCH_PID = $!
+    - SERVER_SEARCH_PID=$!
     - node web-interface/main.js &
-    - SERVER_WEB_PID = $!
+    - SERVER_WEB_PID=$!
 
 script: "node test/client_evolue/client_evolue.js && node test/client_simple/client_simple.js"
 
