@@ -1,0 +1,43 @@
+dist: trusty
+language: node_js
+node_js:
+    - '8'
+sudo: false
+
+before_install:
+    - curl -sL https://deb.nodesource.com/setup_8.x | bash -
+    - apt-get install -y nodejs
+
+install:
+    - cd dt-pin-service && npm i
+    - cd ../dt-stats && npm i
+    - cd ../dt-search-engine && npm i
+    - cd ../web-interface && npm i
+    - cd ../test/client_evolue && npm i && cd ../client_simple && npm i
+    - cd ../..
+
+before_script:
+    - node dt-pin-service/main.js &
+    - SERVER_CRUD_PID = $!
+    - node dt-stats/main.js &
+    - SERVER_STATS_PID = $!
+    - node dt-search-engine/main.js &
+    - SERVER_SEARCH_PID = $!
+    - node web-interface/main.js &
+    - SERVER_WEB_PID = $!
+
+script: "node test/client_evolue/client_evolue.js && node test/client_simple/client_simple.js"
+
+after_script:
+    kill $SERVER_WEB_PID
+    kill $SERVER_SEARCH_PID
+    kill $SERVER_STATS_PID
+    kill $SERVER_CRUD_PID
+cache:
+    directories:
+        - dt-pin-service/node_modules
+        - dt-stats/node_modules
+        - dt-search-engine/node_modules
+        - web-interface/node_modules
+        - test/client_evolue/node_modules
+        - test/client_simple/node_modules
