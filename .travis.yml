@@ -13,16 +13,16 @@ install:
     - cd ../..
 
 before_script:
-    - node dt-pin-service/main.js &
+    - node dt-pin-service &
     - SERVER_CRUD_PID=$!
-    - node dt-stats/main.js &
+    - node dt-stats &
     - SERVER_STATS_PID=$!
-    - node dt-search-engine/main.js &
+    - node dt-search-engine &
     - SERVER_SEARCH_PID=$!
-    - node web-interface/main.js &
+    - node web-interface &
     - SERVER_WEB_PID=$!
 
-script: "node test/client_evolue/client_evolue.js"
+script: "node test/client_evolue"
 
 after_script:
     kill $SERVER_WEB_PID
